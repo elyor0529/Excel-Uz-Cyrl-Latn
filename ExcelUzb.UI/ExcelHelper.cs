@@ -7,20 +7,7 @@ using GemBox.Spreadsheet;
 namespace ExcelUzb.UI
 {
     internal static class ExcelHelper
-    {
-        static ExcelHelper()
-        {
-            var cracks = new[]
-            {
-                "ERDC-FN4O-YKYN-4DBM",
-                "EQU2-1KBF-UZ0D-DJ14",
-                "EQU2-1000-0000-000U"
-            };
-            var rand = new Random();
-
-            SpreadsheetInfo.SetLicense(cracks[rand.Next(0, 2)]);
-        }
-
+    { 
         public static string[] GetSheets(string path)
         {
             var workbook = ExcelFile.Load(path);
